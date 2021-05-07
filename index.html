@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+{
+padding:0;
+margin:0;
+box-size:border box;
+}
+body
+{
+display: grid;
+place-items:centre;
+height:100vh;
+padding:0;
+margine:0;
+}
+#container {
+  position: relative;
+  height:400px;
+  width:400px;
+  border: 1px solid black;
+  background;#fff;
+  color: white;
+}
+#container h2 {
+  position: absolute;
+  font-size:50px;
+  color:black;
+  top:8%;
+  left:25%;
+}
+#container h1 {
+  position: absolute;
+  font-size:110px;
+  color:black;
+  text-align:centre;
+  width:124px;
+  height:178px;
+  top:30%;
+  left:35%;
+}
+
+
+#buttons
+{
+ height:50px;
+ width:260px;
+ position:absolute;
+ bottom:8%;
+ left:70px;
+}
+#buttons button
+{
+height:50px;
+width:120px;
+background:#1479ff;
+outline: none;
+border:1px solid black;
+border-radius:5px;
+cursor : pointer;
+}
+
+
+</style>
+
+<body>
+    <div id="container">
+    <h2>Counter</h2>
+    <h1 id="counterValue">0</h1>
+    <div id="buttons">
+         <button id="decrement">Decrement</button>
+         <button id="increment">Increment</button>
+   </div>
+</div>
+<script>
+let increment = document.querySelector("#increment");
+let decrement = document.querySelector("#decrement");
+let counterValue = document.querySelector("#counterValue");
+
+ counter = 0;
+ increment.addEventListener("click" , ()=>{
+      counter++;
+      counterValue.innerText = counter;
+     
+});
+decrement.addEventListener("click" , ()=>{
+      counter--;
+      counterValue.innerText = counter;
+});
+
+</script>
+   
+
+</head>
+<body>
